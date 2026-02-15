@@ -16,10 +16,32 @@ namespace frostpunk2_ciekawostki.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.2");
 
+            modelBuilder.Entity("frostpunk2_ciekawostki.Controllers.Kategoria", b =>
+                {
+                    b.Property<int>("KategoriaID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Nazwa")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Opis")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("KategoriaID");
+
+                    b.ToTable("Kategorie");
+                });
+
             modelBuilder.Entity("frostpunk2_ciekawostki.Models.Ciekawostka", b =>
                 {
                     b.Property<int>("CiekawostkaId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("KategoriaID")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Opis")
@@ -30,13 +52,26 @@ namespace frostpunk2_ciekawostki.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.PrimitiveCollection<string>("ZdjeciaURL")
+                    b.Property<string>("ZdjecieURL")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("CiekawostkaId");
 
+                    b.HasIndex("KategoriaID");
+
                     b.ToTable("Ciekawostki");
+                });
+
+            modelBuilder.Entity("frostpunk2_ciekawostki.Models.Ciekawostka", b =>
+                {
+                    b.HasOne("frostpunk2_ciekawostki.Controllers.Kategoria", "Kategoria")
+                        .WithMany()
+                        .HasForeignKey("KategoriaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Kategoria");
                 });
 #pragma warning restore 612, 618
         }

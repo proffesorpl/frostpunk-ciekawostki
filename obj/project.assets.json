@@ -6985,19 +6985,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pikan\\.nuget\\packages\\": {}
+    "/home/kyloof/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pikan\\Projekty\\frostpunk2_ciekawostki\\frostpunk2_ciekawostki.csproj",
+      "projectUniqueName": "/home/kyloof/RiderProjects/frostpunk-ciekawostki/frostpunk2_ciekawostki.csproj",
       "projectName": "frostpunk2_ciekawostki",
-      "projectPath": "C:\\Users\\pikan\\Projekty\\frostpunk2_ciekawostki\\frostpunk2_ciekawostki.csproj",
-      "packagesPath": "C:\\Users\\pikan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pikan\\Projekty\\frostpunk2_ciekawostki\\obj\\",
+      "projectPath": "/home/kyloof/RiderProjects/frostpunk-ciekawostki/frostpunk2_ciekawostki.csproj",
+      "packagesPath": "/home/kyloof/.nuget/packages/",
+      "outputPath": "/home/kyloof/RiderProjects/frostpunk-ciekawostki/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pikan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/kyloof/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -7075,7 +7075,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/home/kyloof/.dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
